@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '../../interfaces/heroes.interface';
-import { HeroesService } from '../../services/heroes.service';
 
+import { HeroesService } from '../../services/heroes.service';
+import { Hero } from '../../interfaces/heroes.interface';
 
 @Component({
   selector: 'app-list-page',
@@ -9,17 +9,15 @@ import { HeroesService } from '../../services/heroes.service';
   styles: [
   ]
 })
-export class ListPageComponent implements OnInit{
-
+export class ListPageComponent implements OnInit {
 
   public heroes: Hero[] = [];
 
-  constructor( private heroesService: HeroesService ) {
+  constructor( private heroesService: HeroesService ) {}
 
-  }
   ngOnInit(): void {
     this.heroesService.getHeroes()
-      .subscribe ( heroes => this.heroes = heroes )
-
+      .subscribe( heroes => this.heroes = heroes );
   }
+
 }
