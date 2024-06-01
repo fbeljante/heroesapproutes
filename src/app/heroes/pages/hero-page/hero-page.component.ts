@@ -3,6 +3,7 @@ import { HeroesService } from '../../services/heroes.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs';
 import { Hero } from '../../interfaces/heroes.interface';
+import { ListPageComponent } from '../list-page/list-page.component';
 
 @Component({
   selector: 'app-hero-page',
@@ -31,6 +32,10 @@ export class HeroPageComponent implements OnInit {
         return;
       })
 
+    }
+
+    goBack():void {
+      this.router.navigateByUrl('/heroes/list');
     }
 
 }
