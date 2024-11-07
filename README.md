@@ -1,5 +1,7 @@
 # HeroesApp
 
+CRUD project to display DC and Marvel heroes. Basic functionalities are covered but it's not yet finished.
+
 ## Dev
 
 1. Clone the project
